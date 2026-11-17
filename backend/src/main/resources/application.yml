@@ -1,0 +1,12 @@
+server:
+  port: 8080   # 프론트(5173)와 다른 포트 → 그래서 CORS 문제가 생긴다
+
+spring:
+  jackson:
+    # JSON에 모르는 필드가 오면 에러 대신 무시 (기본값). 실습 1에서 이 동작을 직접 보게 됨
+    deserialization:
+      fail-on-unknown-properties: false
+
+logging:
+  level:
+    com.example.todo: DEBUG   # 우리 코드의 log.debug() 출력 보이게
